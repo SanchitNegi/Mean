@@ -1,0 +1,112 @@
+<div class="content"  ng-controller="ordersCtrl">
+            <div class="wraper no-background clearfix">
+                <div class="col-3-structure clearfix">
+<div class="col-3 form-layout">
+    <article>
+	<h2><span>MENU ITEMS</span></h2>
+            <ul class="menu-list clearfix" >
+
+                            <li ng-repeat="Product in Products">
+                    <h3 class='category_link parent_id6' rel='2' id='category_id' category_id='6' size-type='2'>{{Product.title}} <span></span> </h3><ul>
+                
+                <li ng-repeat="cat in Product.categories"><a href="" class="item_link parent_category_id6" ng-click="product(cat)" id="{{cat}}">{{cat}}</a><span>|</span></li>
+
+
+                                        
+                            
+                    </ul>
+                </li>
+            </ul>
+                          
+        
+
+        <div class="call-us-btn text-center">
+           <a href="javascript:void(0);" class="green-btn btn">Call us @ 665757657657</a>
+        </div>
+        </article>
+	</div>
+ <div class='online-order'>
+        <div class="col-3 mid-col form-layout float-left"> <div class='loader'> 
+    <div class="loader-inner"></div> 
+</div>
+<h2><span>Create Your Order</span></h2>
+<div>
+    <form>
+    <span style="color:red;"><h3>{{Category.title}}</h3></span>
+        <ul class="instructions clearfix">
+        <li><i class="fa fa-pencil-square-o"></i>Price:{{Category.price}}</li>
+        <li><i class="fa fa-pencil-square-o"></i>Desctiprion:{{Category.title}}</li>
+        <li><i class="fa fa-pencil-square-o"></i><input type="hidden" name="category" value="{{Product.id}}" ng-model="product.id"></li>
+    </ul>
+    <input type="submit" value="Add to cart" class="btn green-btn" ng-click="addcart()">
+    </form>
+</div>
+ </div>
+        <div class="col-3 last-col"> <div id="isolated"  class="form-layout form-layout-fixed scroll-div float-right"> <div class='loader1'> 
+    <div class="loader-inner"></div> 
+</div>
+
+<h2><span>My Order</span></h2>
+
+<div class="info-box">
+    
+    <p>You can add or remove any of the available choices.</p>
+    <p>When you finish with your choices, click on 'Continue' for a final overview and confirmation of your order.</p>
+</div>
+
+    <div class="coupon-code-box">
+        <label for="coupon-code">Coupon Code</label>
+        <div class="clearfix">
+                            <input type="text" placeholder="" name="coupon code" class="inbox coupon-code"> 
+            
+            <input type="button" class="btn green-btn" id="inprogress" value="Apply">
+                                </div>
+    </div>
+    <span style="color:red;">{{already}}</span>
+    <form accept-charset="utf-8" method="post" id="CartInfoCartForm" ><div style="display:none;"><input type="hidden" value="POST" name="_method"></div>                                
+   
+    <div class="responsive-table">
+       
+        <table class="table table-striped">
+            <tbody><tr>
+                <th>&nbsp;</th>
+                <th>Qty</th>
+                <th>Item Name</th>
+                <th class="text-center">Price</th>
+            </tr>
+            
+                <tr ng-repeat="carts in cart">
+                  
+                   <td  class="remove"  ng-click="remove(carts._id)"> <a href="javascript:void(0)"><i class="fa fa-times"></i></a></td>
+                    <td class="cart-row"><input type="number" step="1" max="10" min="1" value="1"  class="inbox quantity" ng-model="product.quantity" ng-change="quan(carts._id)" id="{{carts._id}}">
+                   
+                    
+                    </td>
+
+                   <td> {{carts.path}}</td>
+
+                    <td class="text-center">{{carts.subtotal | currency}}</td>
+                </tr>
+
+
+                <tr>
+                <td></td>
+                <td></td>
+              <td>Total</td>
+                <td class="text-center">
+                   {{ total | currency }}
+    </td>
+            </tr>
+
+
+        </tbody></table>
+    </div>
+            <span class="cls_no_deliverable message message-danger" style="display: none;"></span>
+                <div class="text-center"> <input type="submit" class="btn green-btn makeorder" value="Continue" ng-click="finalcart()"> </div>
+
+        </form>
+
+
+
+
+

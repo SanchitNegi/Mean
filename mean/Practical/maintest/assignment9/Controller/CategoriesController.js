@@ -1,0 +1,167 @@
+var express = require('express');
+var router = express.Router();
+var category = require('../Model/categories');
+var subcategory = require('../Model/subcategory');
+var users = require('../Model/usermodel');
+var auth = require('./authorization');
+var passport = require('passport'),
+ LocalStrategy = require('passport-local').Strategy;
+
+var app = express();
+//app.use(passport.initialize());
+//app.use(passport.session());
+
+
+// Function to create Users //
+router.post('/',function(req,res){
+   
+   
+     savecat = category(req.body);
+
+savecat.save(function (err) { 
+  if (err) {
+             console.log("Here");
+             res.send(err);
+            //code
+          }else{
+               var status={"status":"Category Saved Successfully"};
+               res.send(status);
+  //          
+  //          
+  //          
+  //          res.send(
+  //      (err === null) ? {msg: 'Saved'} : {msg: err}
+  //  );
+          }
+        
+    
+});
+    });
+
+router.post('/categorylist',function(req,res) {
+       //storyuser.find({},function(err, docs){
+       //         res.send('index',{docs:docs});
+       // });
+       
+  
+       
+       
+       category.find({"parent_id":null},function(err, docs){
+                res.send('index',{docs:docs});
+        });
+         
+
+ 
+ 
+});
+  
+
+
+router.post('/listing',function(req,res) {
+       //storyuser.find({},function(err, docs){
+       //         res.send('index',{docs:docs});
+       // });
+       
+       category.find({"chiense":"ÄãºÃ"},function(err, docs){
+                res.send('index',{docs:docs});
+        });
+         
+
+ 
+ 
+});
+  
+
+router.post('/sublisting/:id',function(req,res) {
+      
+    uid=req.params.id;
+    
+ category.find({"parent_id":uid},function(err, docs){
+                res.send('index',{docs:docs});
+        }).parent;
+    });
+    
+   
+  
+
+
+
+
+router.get('/login', function(req, res) {
+    res.render('login');
+});
+
+router.post('/login',passport.authenticate('login', {successRedirect: 'loginSuccess',failureRedirect: 'login'}), function(req, res) {
+       
+});
+
+var mysession;
+
+router.get('/loginSuccess',auth.ensureAuthenticated,function(req,res,next) {
+  
+  
+  res.send(req.user);
+});
+
+
+router.get('/loginFailure', function(req, res, next) {
+  res.send('authentication Fail');
+});
+
+
+
+passport.serializeUser(function(user, done) {
+  console.log("serializing " + user);
+ 
+  done(null,user.id);
+});
+//
+
+passport.deserializeUser(function(id, done) {
+      
+    users.findById(id,function(err, user) {
+     
+        done(err, user);
+                  
+
+ });
+   
+});
+
+passport.use('login',new LocalStrategy(function(username, password, done) {
+  
+  process.nextTick(function() {
+     
+    users.findOne({'username':username}, function(err, user) {
+          if (err) {
+            return done(err);
+          }
+
+          if (!user) {
+            return done(null, false);
+          }
+
+          if (user.password != password) {
+            return done(null, false);
+          }
+         return done(null,user);
+    });
+  });
+}));
+
+
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('login');
+});
+
+
+
+
+
+
+
+
+
+module.exports =router;
+

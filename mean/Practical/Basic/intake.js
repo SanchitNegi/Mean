@@ -1,0 +1,26 @@
+//Simple CAse 
+
+//var res=require('./index');
+ //obj=new res.test("Sanchit",25);
+
+//obj1=new res.testing("Sanky",24);
+//obj.setinfo();
+//obj.getinfo();
+//obj1.setinfo();
+//obj1.getinfo();
+//obj1.getinfo();
+
+
+
+//Object Case
+
+var result=require('./obindex');
+
+result.test("Sam",30);
+result.setinfo();
+result.getinfo();
+
+result.testing("Sadfdm",30);
+result.setinfo();
+result.getinfo();
+

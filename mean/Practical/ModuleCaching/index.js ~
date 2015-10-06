@@ -1,0 +1,6 @@
+var project=require("./project.js");
+project.setname("Sanchit");
+console.log(project.getname());
+var project2=require("./project.js");
+project2.setname("Sanchit");
+console.log(project2.getname());

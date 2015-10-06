@@ -1,0 +1,14 @@
+var a;
+var test=function(a){
+
+name=a;
+
+
+}
+
+var get=function(){
+    return {
+        name:name;
+    }
+    
+}

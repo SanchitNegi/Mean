@@ -1,0 +1,22 @@
+ <div class="content" ng-controller="HomeCtrl">
+        <div class="wrap"><div class="content  single-frame">
+    <div class="wrap">
+                <form  autocomplete="off" id="UserForgetPasswordForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>        <div class="clearfix">
+            <section class="form-layout sign-up registration-from">
+               <h2> <span>Forgot Password</span> </h2>
+	       <span style="color:red">{{forgemessage}}</span>
+               <ul class='clearfix'>
+                	<li class="clearfix">
+                    	<span class="title"><label>Email <em>*</em></label></span>
+                        <div class="title-box"><div class="input text"><input name="email" placeholder="Enter Your Email" autofocus="1" class="inbox" maxlength="250" type="text" id="UserEmail" ng-model="login.email"/></div> </div>
+                    </li>
+                    
+                    <li>
+                    	<span class="title blank">&nbsp;</span>
+                        <div class="title-box"><button type="submit" class="btn green-btn" ng-click="forgetpassword()"> Submit </button></div>
+                    </li>
+               </ul>
+            </section>
+        </div>
+        </form>    </div>
+</div>

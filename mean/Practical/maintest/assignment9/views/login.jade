@@ -1,0 +1,24 @@
+extends layout
+
+block content
+   section.container
+      .login
+        h1 Login to Web App
+        form(method='post', action='login')
+          p #{user}
+          p #{age}
+          p
+            input(type='text', name='username', value='', placeholder='Username or Email')
+          p
+            input(type='password', name='password', value='', placeholder='Password')
+          p.remember_me
+            label
+              input#remember_me(type='checkbox', name='remember_me')
+              |             Remember me on this computer
+          p.submit
+            input(type='submit', name='commit', value='Login')
+      .login-help
+        p
+          | Forgot your password? 
+          a(href='index.html') Click here to reset it
+          | .

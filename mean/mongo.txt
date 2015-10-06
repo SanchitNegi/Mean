@@ -1,0 +1,67 @@
+Insert Command:
+db.users.insert({"name" : "Sanchit",'username':'sanchitn','password':'smartdata','status':'0'});
+Find Command:
+db.users.find({name:'1',username:1}).pretty()
+db.users.find()
+db.users.find({'name':'Sanchit'}).pretty()
+
+Find Command with Or condition
+db.users.find({$or: [ { name: { $eq: 'Sanchit' } }, { username: { $eq: 'sanchit'} } ]})
+
+Update Command with set method and the lastmodified
+db.users.update(
+    { name: "Ragahav"},
+    {
+      $set: {
+        username: "Ram"
+       
+       
+      },
+      $currentDate: { lastModified: true }
+      
+    }
+)
+Update Command for single Field
+db.users.update(
+    { password: "smartdata"},
+    
+      {
+        name: "Ragahav"
+       
+      }
+     
+   
+)
+Update Command with upsert
+
+db.users.update({ password: "smart"}, { $set:{'name':'Imran'},$mul: { 'status':4}, $currentDate: { lastModified: true }}, { upsert: true } )
+
+Update Command with rename
+db.users.update( { _id: 1 },{ $rename: { 'name': 'fname' } } )
+Update Command with setonInsert
+db.users.update(
+  { 'name': 'Mohint' },
+  {
+     $setOnInsert : { 'item': "mango" ,defaultQty: 50,'active':0}
+    
+    
+  },
+  {upsert: true}
+)
+
+db.users.update(
+   { name: "Mahesh" },
+   { $set: { item: "fsfsdfds", defaultQty: 12 } },
+  {upsert: true}
+ 
+)
+Update Command with min method
+db.scores.update( {'name':'Sahil'}, { $min: { status: 5 } } )
+db.scores.update( {'name':'Sahil'}, { $max: { status: 5 } } )
+Update Command with addtoset array method
+db.users.update(
+   {'name':'Kuldeep'},
+   { $addToSet: {letters: "c", "d"} }
+)
+Update Command with unset method
+db.users.update( { '_id':ObjectId("55e56ce4280c5ebd5361ca2c")}, { $unset: { 'name':"" } } )

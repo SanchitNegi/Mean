@@ -1,0 +1,15 @@
+{
+  "name": "expresst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sanchit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "localize": "^0.4.7"
+  }
+}

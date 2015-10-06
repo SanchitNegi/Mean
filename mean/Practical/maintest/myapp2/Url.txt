@@ -1,0 +1,16 @@
+
+Database:Sanchit
+
+http://localhost:3000/users/list  [For Listing]
+
+http://localhost:3000/users/deleteuser/id  [Delete User]
+
+http://localhost:3000/users/updateuser/id[Update User]
+
+
+http://localhost:3000/users[Add User]
+
+Date For save 
+
+{"id":115,"first_name": "Sanchit", "last_name": "Negi","email": "sanchitn.sdd@smartdatainc.net","password":"smartdatas","age":"30"}
+

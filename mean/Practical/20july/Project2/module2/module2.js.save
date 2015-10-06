@@ -1,0 +1,6 @@
+var test={};
+test.test=function(){
+console.log("Hi I am second Module");
+
+}
+exports.test=test;

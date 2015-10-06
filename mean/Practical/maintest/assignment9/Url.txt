@@ -1,0 +1,21 @@
+
+Database:Sanchit
+
+http://localhost:3000/users/list  [For Listing]
+
+http://localhost:3000/users/deleteuser/id  [Delete User]
+
+http://localhost:3000/users/updateuser/id[Update User]
+
+
+http://localhost:3000/users[Add User]
+
+Date For save 
+
+{"id":115,"first_name": "Sanchit", "last_name": "Negi","email": "sanchitn.sdd@smartdatainc.net","password":"smartdatas","age":"30"}
+
+{ "_id" : 1, "name" : "Sports", "parent_id" : null, "__v" : 0 }
+{ "_id" : 2, "name" : "Football", "parent_id" : 1, "__v" : 0 }
+{ "_id" : 3, "name" : "Tennis", "parent_id" : 1, "__v" : 0 }
+{ "_id" : 4, "name" : "Singing", "parent_id" : null, "__v" : 0 }
+{ "_id" : 5, "name" : "Classical", "parent_id" : 4, "__v" : 0 }

@@ -1,0 +1,121 @@
+<html ng-app="myapp">
+    
+<head>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/horizontal/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/horizontal/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/horizontal/master.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/horizontal/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/horizontal/color-theme.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/horizontal/responsiveslides.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/jquery-ui.css" />
+    <script  type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script type="application/javascript" src="/javascripts/angular-route.min.js"></script>
+    <script type="application/javascript" src="/app.js"></script>
+    <script type="application/javascript" src="/services/myservice.js"></script>
+     <script type="application/javascript" src="/directives/custom.js"></script>
+  
+    <script type="application/javascript" src="/services/promises.js"></script>
+     <script type="application/javascript" src="/controller/ordersCtrl.js"></script>
+      <script type="application/javascript" src="/controller/productCtrl.js"></script>
+   <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="/javascripts/validation/jquery.validate.js"></script>
+    
+    <!--  <script type="text/javascript" src="/javascripts/jquery.min.js">
+        </script><script type="text/javascript" src="/javascripts/bootstrap.min.js">
+        </script><script type="text/javascript" src="/javascripts/responsiveslides.min.js"></script>
+        <script type="text/javascript" src="/javascripts/master.js"></script>
+       
+       
+      <script src="/javascripts/html5shiv.min.js"></script>
+      <script src="/javascripts/respond.min.js"></script>-->
+</head>
+
+<body class='theme-two'>
+        <!-- HEADER START -->
+
+<header >
+    <!-- HEADER TOP -->
+    <div class="header-top">
+	
+    
+        
+	<div class="wrap"  ng-include src="'/view/Elements/header.html'">
+	
+	
+
+	
+	 
+	
+	
+	
+        
+	   
+                          <!--  <ul>
+                                                <li><a href="#/signin">Sign In</a></li>
+                        <li><a href="#/signup">Sign Up</a></li>
+                        <li><a href="#/forgetPassword">Forgot Password?</a></li>
+
+
+                
+                </ul>-->
+        </div>
+    </div>
+    <!-- /HEADER TOP -->
+    <!-- HEADER BODY -->
+    <section class="header-body clearfix">
+        <div class="wrap">
+            <h1>
+                                   <a href="/users/login">The Busy Bean <span></span></a>
+                             </h1>
+        </div>
+    </section>
+    <!-- /HEADER BODY -->
+                              
+        <!-- MENU -->
+        <nav class="nav-menu" ng-include src="'/view/Elements/footer.html'">
+            
+        </nav>
+        <!-- /MENU -->
+</header>
+<!-- END HEADER -->
+
+
+<!--<script>
+$('.tabs-menue li').click(function(){
+    $('.tabs-menue li').removeClass('active');
+    $(this).addClass('active');
+});
+</script>--><!-- BANNER START-->
+
+<div ng-view></div>
+    
+    <!-- END BANNER-->
+    <style>
+    .rslides li img{ min-height:80px !important;}
+    .rslides li img{ max-height:567px !important;}
+</style>
+             
+                        
+
+
+</div></div><!-- FOOTER START -->
+
+    <footer class="footer">
+        <div class="wrap clearfix">
+            <ul class="footer-menu">
+                                           <li><a href="/pannels/staticContent/zBV7kmTmFXgXy5XJ9tZbTzj1wiO1nsGs57-fN67-lPI/wR9ix0j1eCoKiO4zKgaVeGOJPN30fKA6YdWCkPADKow/EosuaKyFVqJocBB6wAUXYb4j8wRXxnRh-N6uHu2UUXo/Test%20two">Test two</a></li>
+                                    </ul>
+                        <ul class="social-icon">
+                                    <li><a href="https://facebook.com" target="blank"><img alt="facebook" src="/images/facebook.png" /></a></li>
+                                    <li><a href="https://facebook.com" target="blank"><img alt="pinterest" src="/images/pinterest.png" /></a></li>
+                                    <li><a href="https://facebook.com" target="blank"><img alt="instagram" src="/images/instagram.png" /></a></li>
+                                    <li><a href="https://facebook.com" target="blank"><img alt="google plue" src="/images/google-plus.png" /></a></li>
+                                    <li><a href="https://facebook.com" target="blank"><img alt="yellow page" src="/images/yellow-page.png" /></a></li>
+                            </ul>
+                    </div>
+    </footer>		
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+
+@charset "utf-8";
+/* CSS Document */
+
+.logoimg{float: left !important;}
+.logotxt{line-height: 65px;}
+.headerRightText{line-height:95px;font-weight:bold;color:white;float:right;margin-right:80px;font-size:20px;}
+.side-nav {top: 100px;}
+#page-wrapper{padding: 65px 25px;}
+
+
+.huge {
+    font-size: 40px; text-align:center;
+}
+
+.panel-primary1 {
+    border-color: #fff;
+}
+
+.panel-primary1 > .panel-heading1 {
+    background-color: #ff7878;
+    color: #ffffff;
+	border:none !important
+}
+
+.panel-heading1 {
+  
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;
+}
+
+
+.panel1 {
+    background-color: #ffffff;
+        border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.btns{ background:#09F; border:none; border-radius:5px; padding:10px; color:#fff;}
+
+.heading{ font-size: 18px;
+        position: absolute;
+    top: 11px; color:#666;}
+	
+	.heading1{ font-size: 18px;
+            top: 11px; color:#666;}
+	
+.fts20{ font-size:20px;}
+.fts22{ font-size:16px; color:#09F; font-weight:normal;}	
+	
+.spacer10{ height:10px;}
+.spacer20{ height:20px;}
+.spacer30{ height:30px;}
+.spacer40{ height:40px;}
+.spacer50{ height:50px;}	

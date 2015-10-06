@@ -1,0 +1,39 @@
+fs = require('fs');
+path = require('path');
+fs.readFile('Files/007-Logo.jpg', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }else{
+
+	var dir = 'Media';
+
+	if (!fs.exists(dir,function(err,data){
+
+                   if(err){
+			 return console.log(err);
+                    }else{
+                    
+                          fs.mkdir(dir,function(err,data){
+                                        if(err){
+			 			return console.log(err);
+                   			 }else{
+                                              console.log("folder created");
+                                         }
+
+			  });
+
+                   }
+
+
+
+		})){  // It will check for dir 
+	    
+	}else{
+
+	console.log("Bi");
+	}
+
+}
+
+  
+});

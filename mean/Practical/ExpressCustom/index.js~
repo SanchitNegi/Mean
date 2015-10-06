@@ -1,0 +1,17 @@
+var express = require('express');
+var router = express.Router();
+var app     = express();
+var path    = require("path");
+//app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname,'view'));
+app.set('view engine', 'jade');
+
+
+/* GET home page. */
+app.get('/',function(req,res,next){
+  res.render(path.join(__dirname+'/view/index.jade'));
+  //__dirname : It will resolve to your project folder.
+});
+
+app.listen(3000);
+console.log("Running at Port 3000");

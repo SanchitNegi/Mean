@@ -1,0 +1,38 @@
+include layout.jade 
+html
+  head
+    meta(charset='utf-8')
+    title Best Login Page design in html and css
+    
+      
+    //
+      <script>
+      validator.isEmail(email); //=> true
+      </script>
+  body
+    #login
+ label !{locals.languages}
+      h1
+        strong Welcome.
+        |  Please login.
+      form(name='test', method='POST')
+        fieldset
+          
+          p
+            input(name='email', type='text', required='', value='Email', onblur="if(this.value=='')this.value='Username'", onfocus="if(this.value=='Username')this.value='' ")
+          p
+            input(name='password', type='password', required='', value='Password', onblur="if(this.value=='')this.value='Password'", onfocus="if(this.value=='Password')this.value='' ")
+          p
+            a(href='/custom') Forgot Password?
+          p
+            input(type='submit', value='Login')
+      p
+        span.btn-round or
+      p
+        a.facebook-before
+        button.facebook Login Using Facbook
+      p
+        a.twitter-before
+        button.twitter Login Using Twitter
+    // end login
+

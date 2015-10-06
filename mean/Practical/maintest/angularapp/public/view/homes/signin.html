@@ -1,0 +1,59 @@
+  <div class="content" <!--ng-controller="HomeCtrl"-->>
+        <div class="wrap"><div class="content single-frame">
+    <div class="wrap">
+                <form autocomplete="off" id="UserSignInForm" method="post" accept-charset="utf-8" novalidate><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>        <div class="clearfix">
+            <section class="form-layout sign-in">
+                <h2><span>Sign In</span></h2>    	
+                {{erromessage}}
+                <ul class="clearfix">
+                	
+			<li>
+			      
+                    	<span class="title"><label>Email <em>*</em></label></span>
+                        <div class="title-box"><input name="email" placeholder="Enter Your Username" autofocus="1" maxlength="50" class="inbox" type="text" id="UserEmail" ng-model="login.email"/></div>
+                       
+			</li>
+                    
+                    <li>
+                    	<span class="title"><label>Password <em>*</em></label></span>
+                        <div class="title-box">
+							<div class="password"><input name="password" placeholder="Enter Your Password" maxlength="20" class="inbox" type="password" id="UserPassword" ng-model="login.password"/>                            </div>
+                            <div class="password-remember">
+                                                                    <input type="checkbox" id="Remember_me_2"  name="data[User][remember]" /> <label for="Remember_me_2">Remember me</label>
+                                                                <div style='float:right;'>
+                                    <a href="/users/forgetPassword">Forgot Password?</a>                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </li>
+                    
+                    <li>
+                    	<span class="title blank">&nbsp;</span>
+                        <div class="title-box"><button type="submit" class="btn green-btn" ng-click="userlogin()">Sign In</button></div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        </form>    </div>
+</div>
+	   <!--    <script>
+            $("#UserSignInForm").validate({
+                rules: {
+                    "data[User][email]": {
+                        required: true,
+                    },
+                    "data[User][password]": {
+                        required: true,
+                    }
+                },
+                messages: {
+                    "data[User][email]": {
+                        required: "Please enter your email",
+                    },
+                    "data[User][password]": {
+                        required: "Please enter your password",
+                    }
+                }
+            });
+        </script>-->

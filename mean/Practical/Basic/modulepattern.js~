@@ -1,0 +1,14 @@
+var myObjectLiteral = {
+ 
+    variableKey:10,
+ 
+    functionKey: function () {
+       console.log("Hi");
+    }
+};
+
+
+
+myObjectLiteral.functionKey();
+console.log(myObjectLiteral.variableKey);
+

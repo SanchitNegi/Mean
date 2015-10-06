@@ -1,0 +1,63 @@
+ <div class="content" ng-controller="HomeCtrl">
+        <div class="wrap"><script src="https://www.google.com/recaptcha/api.js"></script>
+<div class="content single-frame">
+    <div class="wrap">
+		        <form  id="UsersRegistration" method="post" accept-charset="utf-8" enctype="multipart/form-data" novalidate><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div><input type="hidden" name="data[User][role_id]" autocomplete="off" value="4" id="UserRoleId"/>        <div class="clearfix">
+            <section class="form-layout sign-up registration-from">
+            	<h2> <span>My Profile</span></h2>
+		<h2 style="color:green"> {{message}}</h2>    	
+                <ul class="clearfix">
+                	<li>
+                    	<span class="title"><label>Salutation <em>*</em></label></span>
+                        <div class="title-box"><select name="salutation" autocomplete="off" class="inbox" id="UserSalutation" ng-model="login.salutation">
+<option value="Mr.">Mr.</option>
+<option value="Ms.">Ms.</option>
+<option value="Mrs">Mrs</option>
+</select></div>
+                    </li>
+                    
+                    <li>
+                    	<span class="title"><label>First Name <em>*</em></label></span>
+                        <div class="title-box"><input name="first_name" autocomplete="off" class="inbox" placeholder="Enter Your First Name" maxlength="20" type="text" id="UserFname" ng-model="login.first_name"/></div>
+                    </li>
+                    
+                    <li>
+                    	<span class="title"><label>Last Name </label></span>
+                        <div class="title-box"><input name="last_name" autocomplete="off" class="inbox" placeholder="Enter Your Last Name" maxlength="20" type="text" id="UserLname" ng-model="login.last_name"/></div>
+                    </li>
+                    
+                    <li>
+                    	<span class="title"><label>Email <em>*</em></label></span>
+                        <div class="title-box"><input name="email" autocomplete="off" id="oldemail" class="inbox" placeholder="Enter Your Email" maxlength="50" required="required" type="text" ng-model="login.email"/></div>
+                    </li>
+                    
+                   
+                   <!-- <li>
+                    	<span class="title"><label>Mobile Phone<em>*</em></label></span>
+                        <div class="title-box">
+                         
+                            <input name="phone_number" autocomplete="off" class="inbox phone" placeholder="Mobile Phone" maxlength="11" required="required" type="text" id="UserPhone" ng-model="login.phone_number"/></div>
+                    </li>-->
+                     <!--<li>
+                    	<span class="title"><label>Browse<em>*</em></label></span>
+                        <div class="title-box">
+                         
+                            <input name="profileimg" autocomplete="off" class="inbox phone" placeholder="Mobile Phone" maxlength="11" required="required" type="file" file-model="myFile"/></div>
+                    </li>
+                    -->
+                  
+                    
+                    
+                    
+                   
+                    
+                    <li>
+                    	<span class="title blank">&nbsp;</span>
+                        <div class="title-box"><button type="submit" class="btn green-btn" ng-click="updateProfile()">Update</button>
+                           <!-- <button type="button" onclick="window.location.href='/users/login/'" class="btn green-btn">Cancel</button> -->                   	</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+	</form>	</div>
+</div>
